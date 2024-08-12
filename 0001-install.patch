@@ -1,0 +1,94 @@
+From 3c558637dd695b98d9e1fca7e34aa54b399cd99a Mon Sep 17 00:00:00 2001
+From: wjyrich <1071633242@qq.com>
+Date: Sun, 11 Aug 2024 19:05:39 +0800
+Subject: [PATCH] install
+
+---
+ PLCTool/App/DLMSTranslator.h              | 1 +
+ PLCTool/App/GXDLMSTranslatorInterface.cpp | 2 +-
+ PLCTool/Topology/StringParams.cpp         | 2 +-
+ PLCTool/Topology/StringParams.h           | 2 +-
+ PLCTool/gurux/include/GXCipher.h          | 2 +-
+ PLCTool/gurux/src/GXCipher.cpp            | 2 +-
+ 6 files changed, 6 insertions(+), 5 deletions(-)
+
+diff --git a/PLCTool/App/DLMSTranslator.h b/PLCTool/App/DLMSTranslator.h
+index 9519fe6..1b42631 100644
+--- a/PLCTool/App/DLMSTranslator.h
++++ b/PLCTool/App/DLMSTranslator.h
+@@ -26,6 +26,7 @@
+ 
+ #include <string>
+ #include <vector>
++#include <cstdint>
+ 
+ class DLMSTranslator
+ {
+diff --git a/PLCTool/App/GXDLMSTranslatorInterface.cpp b/PLCTool/App/GXDLMSTranslatorInterface.cpp
+index 0f3fed3..43ca834 100644
+--- a/PLCTool/App/GXDLMSTranslatorInterface.cpp
++++ b/PLCTool/App/GXDLMSTranslatorInterface.cpp
+@@ -28,7 +28,7 @@
+ //
+ 
+ #include "GXDLMSTranslatorInterface.h"
+-
++#include <cstdint>
+ #include <PLCTool/gurux/include/GXBytebuffer.h>
+ #include <PLCTool/gurux/include/GXDLMSTranslator.h>
+ #include <PLCTool/gurux/include/enums.h>
+diff --git a/PLCTool/Topology/StringParams.cpp b/PLCTool/Topology/StringParams.cpp
+index d1fdb85..dadc3ee 100755
+--- a/PLCTool/Topology/StringParams.cpp
++++ b/PLCTool/Topology/StringParams.cpp
+@@ -28,7 +28,7 @@
+ //
+ 
+ #include <PLCTool/Topology/StringParams.h>
+-
++#include <cstdint>
+ #include <cmath>
+ #include <iostream>
+ #include <string>
+diff --git a/PLCTool/Topology/StringParams.h b/PLCTool/Topology/StringParams.h
+index a074472..d382e3f 100755
+--- a/PLCTool/Topology/StringParams.h
++++ b/PLCTool/Topology/StringParams.h
+@@ -34,7 +34,7 @@
+ #include <vector>
+ #include <algorithm>
+ #include <string>
+-
++#include <cstdint>
+ namespace PLCTool {
+   struct StringParamEntry {
+     std::string key;
+diff --git a/PLCTool/gurux/include/GXCipher.h b/PLCTool/gurux/include/GXCipher.h
+index 26bbfc4..58a83e5 100644
+--- a/PLCTool/gurux/include/GXCipher.h
++++ b/PLCTool/gurux/include/GXCipher.h
+@@ -34,7 +34,7 @@
+ 
+ #ifndef GXCIPHER_H
+ #define GXCIPHER_H
+-
++#include <cstdint>
+ #include "GXBytebuffer.h"
+ 
+ class CGXCipher
+diff --git a/PLCTool/gurux/src/GXCipher.cpp b/PLCTool/gurux/src/GXCipher.cpp
+index 378ebd3..5c84b3b 100644
+--- a/PLCTool/gurux/src/GXCipher.cpp
++++ b/PLCTool/gurux/src/GXCipher.cpp
+@@ -35,7 +35,7 @@
+ #include "../include/GXCipher.h"
+ #include "../include/chipperingenums.h"
+ #include "../include/GXHelpers.h"
+-
++#include <cstdint>
+ void CGXCipher::Init(
+     unsigned char* systemTitle,
+     unsigned char count)
+-- 
+2.43.4
+
